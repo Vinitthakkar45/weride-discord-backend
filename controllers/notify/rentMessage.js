@@ -19,12 +19,12 @@ const rentMessage = async (req, res) => {
 
     const { data, error: select_error } = await supabase
         .from('users')
-        .select('discordId')
+        .select('discord_id')
         .eq('id',userId)
-    if (select_error || !data[0].discordId)
+    if (select_error || !(data[0].discord_id))
     return res.status(500).json({ message: 'NO DiscordId found: ' + select_error.message});
 
-    const userDiscordId = String(data[0].discordId);
+    const userDiscordId = String(data[0].discord_id);
     sendMessageToUser(userDiscordId, messageContent);
     res.status(200).send('Rental processed!');
 };
