@@ -25,20 +25,20 @@ export default {
                 console.error('Error deleting user:', deleteError);
                 await interaction.reply({
                     content: `Failed to delete user with ID ${userId}.`,
-                    ephemeral: true,
+                    ephemeral: false,
                 });
                 return;
             }
 
             await interaction.reply({
                 content: `Successfully deleted user with ID ${userId}.`,
-                ephemeral: true,
+                ephemeral: false,
             });
         } catch (error) {
             console.error('Error handling delete_user command:', error);
             await interaction.reply({
                 content: 'An unexpected error occurred while processing your request.',
-                ephemeral: true,
+                ephemeral: false,
             });
         }
     },
