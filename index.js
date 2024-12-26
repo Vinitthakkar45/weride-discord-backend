@@ -9,6 +9,7 @@ import notify from './routes/notifyUser.js';
 
 app.use('/auth', auth);
 app.use('/notify', notify);
+app.use('/invite', notify);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

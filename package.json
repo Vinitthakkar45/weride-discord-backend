@@ -13,6 +13,8 @@
     "@supabase/supabase-js": "^2.47.8",
     "discord.js": "^14.16.3",
     "dotenv": "^16.4.5",
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "nodemailer": "^6.9.16",
+    "sharp": "^0.33.5"
   }
 }
