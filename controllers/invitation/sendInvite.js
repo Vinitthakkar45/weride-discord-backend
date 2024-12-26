@@ -40,8 +40,8 @@ const sendInvite = async function sendInvite(imagePath, name, email, status) {
                     {
                         filename: `${name}_invitation.png`,
                         path: imagePath,
-                        cid: imageCid
-                    },
+                        cid: imageCid,
+                    }
                 ],
             };
         } else {
@@ -55,7 +55,7 @@ const sendInvite = async function sendInvite(imagePath, name, email, status) {
                         <p>Here's your very own invite card from <strong>WeRide</strong>, the ultimate platform for renting and sharing bikes or scooters effortlessly.</p>
                         
                         <!-- Embedded Image -->
-                        <img src="cid:${imageCid}" alt="Your Invite Card" style="width: 100%; max-width: 600px; margin: 20px auto; display: block;" />
+                        <img src="cid:${imageCid}" alt="WeRide Invitation" style="width: 100%; max-width: 600px; margin: 20px auto; display: block;" />
             
                         <p style="font-size: 16px; margin: 20px 0;">Save this card and share it with your friends to spread the joy of WeRide!</p>
             
@@ -67,10 +67,9 @@ const sendInvite = async function sendInvite(imagePath, name, email, status) {
                         filename: `${name}_invitation.png`,
                         path: imagePath,
                         cid: imageCid,
-                    },
+                    }
                 ],
             };
-
         }
         await transporter.sendMail(mailData);
     } catch (err) {

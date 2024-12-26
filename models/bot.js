@@ -2,6 +2,8 @@ import { Client, GatewayIntentBits, REST, Routes, Collection, Events } from 'dis
 import dotenv from 'dotenv';
 import deleteUser from '../controllers/commands/deleteUser.js';
 import pingpong from '../controllers/commands/pingpong.js';
+import inviteFrom from '../controllers/commands/from.js';
+import inviteTo from '../controllers/commands/to.js';
 
 dotenv.config();
 
@@ -18,9 +20,11 @@ const client = new Client({
 
 client.commands = new Collection();
 
-const commands = [deleteUser.data,pingpong.data];
+const commands = [deleteUser.data,pingpong.data,inviteFrom.data,inviteTo.data];
 client.commands.set(deleteUser.data.name, deleteUser);
 client.commands.set(pingpong.data.name, pingpong);
+client.commands.set(inviteFrom.data.name, inviteFrom);
+client.commands.set(inviteTo.data.name, inviteTo);
 
 const rest = new REST({ version: '10' }).setToken(BOT_TOKEN);
 
