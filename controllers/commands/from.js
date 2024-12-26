@@ -1,5 +1,6 @@
 import { SlashCommandBuilder, AttachmentBuilder } from 'discord.js';
 import { generateImage } from '../invitation/generateImage.js';
+import fs from "fs";
 
 export default {
     data: new SlashCommandBuilder()
