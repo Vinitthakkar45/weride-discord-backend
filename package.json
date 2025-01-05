@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon index.js",
-    "start": "npm run install-fonts && node index.js",
-    "install-fonts": "apt-get update && apt-get install -y fontconfig fonts-dejavu-core fonts-dejavu-mono fonts-dejavu-serif"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
