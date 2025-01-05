@@ -14,7 +14,7 @@ const generateImage = async function generatePersonalizedImage(templatePath, use
                         font-size: 85px; 
                         font-weight: bold; 
                         text-anchor: middle; 
-                        font-family: Arial, sans-serif;
+                        font-family: sans-serif;
                         filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5)); 
                     }
                 </style>
