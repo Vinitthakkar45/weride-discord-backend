@@ -11,6 +11,7 @@ app.use('/auth', auth);
 app.use('/notify', notify);
 app.use('/invite', notify);
 
+app.get('/',(req,res)=>{res.status(200).send("Working!")});
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
